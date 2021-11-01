@@ -3,10 +3,12 @@ package com.example.a1101appcheckbox;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tv1 ;
     RadioGroup rg;
     RadioButton rd1,rd2;
+    Spinner spin;
+    String[] ary  = new String[]{"123","456"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         rd1 = findViewById(R.id.rd1);
         rd2 = findViewById(R.id.rd2);
         rg.setOnCheckedChangeListener(rglistener);
+        spin = findViewById(R.id.spin);
+        ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ary);
+        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(adp);
 
     }
     private RadioGroup.OnCheckedChangeListener rglistener = new RadioGroup.OnCheckedChangeListener() {
