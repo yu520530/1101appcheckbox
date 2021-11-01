@@ -5,19 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-   <CheckBox
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:id="@+id/ck1"
-       android:textSize="20sp"
-       android:text="選項一"/>
-    <CheckBox
+    <TextView
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:text="會打哪路"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/ck1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginLeft="15sp"
+        android:text="不配打野"
+        android:textSize="20sp" />
+
+    <CheckBox
         android:id="@+id/ck2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/ck1"
+        android:layout_marginLeft="15sp"
+        android:text="不配上路"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ck2"
+        android:text="會玩哪隻"
+        android:layout_marginLeft="10sp"
         android:textSize="20sp"
-        android:text="選項二"/>
+        android:id="@+id/tv2"/>
+    <RadioGroup
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_below="@+id/tv2"
+        android:layout_marginLeft="15sp"
+        android:id="@+id/rg">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="蠻王"
+            android:id="@+id/rd1"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="提摩"
+
+            android:id="@+id/rd2"
+            />
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/btn"
+        android:layout_below="@+id/rg"
+        android:layout_marginLeft="10sp"
+        android:text="送出"/>
 
 </RelativeLayout>
